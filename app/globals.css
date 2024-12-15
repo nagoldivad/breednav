@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Below is the default Next.js stuff */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
