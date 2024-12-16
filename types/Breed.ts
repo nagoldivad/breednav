@@ -9,4 +9,12 @@ export interface Breed {
   };
   bred_for?: string;
   size?: string;
+  height?: {
+    imperial?: string;
+    metric?: string;
+  };
+  weight?: {
+    imperial?: string;
+    metric?: string;
+  };
 }

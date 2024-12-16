@@ -1,5 +1,6 @@
 import { Breed } from "@/types/Breed";
 import SelectTraits from "@/components/SelectTraits";
+import SelectGroups from "@/components/SelectGroups";
 import NameField from "@/components/NameField";
 
 
@@ -8,6 +9,7 @@ interface FilterSectionProps {
   onSizeChange: (size: string) => void;
   onTraitsChange: (traits: string[]) => void;
   onNameChange: (name: string) => void;
+  onGroupsChange: (groups: string[]) => void;
   numberOfBreeds: number;
 }
 
@@ -16,6 +18,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
   onNameChange,
   onSizeChange,
   onTraitsChange,
+  onGroupsChange,
   numberOfBreeds
 }) => {
   return (
@@ -38,17 +41,26 @@ const FilterSection: React.FC<FilterSectionProps> = ({
         </div>
 
         {/* Size Filter */}
-        <div className="mb-4">
+        <div className="custom-select-container mb-4">
           <label className="block font-medium mb-1">Size</label>
           <select
-            className="w-full p-2 border rounded"
+            className="custom-select"
             onChange={(e) => onSizeChange(e.target.value)}
           >
             <option value="">All Sizes</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+            <option value="small">Small (less than 25 lbs)</option>
+            <option value="medium">Medium (26 to 50 lbs)</option>
+            <option value="large">Large (more than 50 lbs)</option>
           </select>
+        </div>
+
+        {/* Group Filter */}
+        <div className="mb-4">
+          <label className="block font-medium mb-1">Groups</label>
+          <SelectGroups
+            breeds={breeds}
+            onGroupsChange={onGroupsChange}
+          />
         </div>
 
         {/* Trait Filter */}

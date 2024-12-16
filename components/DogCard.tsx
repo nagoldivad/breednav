@@ -24,6 +24,9 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => (
       <p className="mb-2">{breed.temperament}</p>
       <p className="text-gray-700 text-sm">Life Span: {breed.life_span}</p>
       <p className="text-gray-700 text-sm">Bred For: {breed.bred_for || 'Not specified'}</p>
+      <p className="text-gray-700 text-sm">Height: {breed.height?.imperial + ' inches' || 'Not specified'}</p>
+      <p className="text-gray-700 text-sm">Weight: {breed.weight?.imperial + ' pounds' || 'Not specified'}</p>
+      
     </section>
 
   </div>

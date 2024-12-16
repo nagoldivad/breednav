@@ -16,7 +16,6 @@ const NameField: React.FC<NameFieldProps> = ({ onNameChange }) => {
   const clearInput = () => {
     setInputValue(""); // Clear the input field
     onNameChange(""); // Notify parent of cleared state
-    console.log("NameField clearInput"); // DEBUG
   };
 
   return (

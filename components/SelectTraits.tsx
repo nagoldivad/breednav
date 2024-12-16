@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Breed } from "@/types/Breed";
 import Select, { MultiValue } from "react-select";
 
