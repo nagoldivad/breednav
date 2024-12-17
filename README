@@ -1,0 +1,103 @@
+# BreedNav
+
+**BreedNav** is a dynamic dog breed search application that allows users to explore and filter dog breeds based on traits like size, temperament, and breed group. Built with **Next.js**, **Tailwind CSS**, and powered by **The Dog API**, BreedNav helps you find your perfect pup!
+
+---
+
+## Features
+
+- 🐶 **Dynamic Filtering**: Search for breeds by name, size, temperament, and breed group.
+- 🖼️ **Breed Images**: Visual representation of each breed fetched from The Dog API.
+- ⚡ **Fast & Responsive**: Built with Next.js and styled with Tailwind CSS for modern performance and design.
+- 📊 **Centralized State Management**: Filters and breed lists stay in sync.
+
+---
+
+## Tech Stack
+
+- **Next.js**: React framework for SSR and seamless frontend development.
+- **Tailwind CSS**: Utility-first CSS framework for responsive styling.
+- **Axios**: For fetching breed data from The Dog API.
+- **The Dog API**: Provides comprehensive dog breed data and images.
+
+---
+
+## Installation
+
+To run BreedNav locally:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/nagoldivad/breednav.git
+   cd breednav
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
+
+3. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   or
+   ```bash
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
+
+---
+
+## Deployment
+
+BreedNav is optimized for deployment with **Vercel**.
+
+1. Push your code to GitHub.
+2. Connect your repository on [Vercel](https://vercel.com).
+3. Deploy with a single click!
+
+---
+
+## API Configuration
+
+BreedNav uses The Dog API for breed data and images.
+
+- Register for an API key at [The Dog API](https://thedogapi.com/).
+- Add your API key to a `.env.local` file:
+   ```
+   NEXT_PUBLIC_DOG_API_KEY=your-api-key-here
+   ```
+
+---
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve BreedNav:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgements
+
+- [The Dog API](https://thedogapi.com) for providing breed data.
+- [Tailwind CSS](https://tailwindcss.com) for making styling a breeze.
+- [Vercel](https://vercel.com) for seamless deployment.
+
+---
+
+**Created with ❤️ by David Logan & Charla the AI**
