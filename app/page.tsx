@@ -7,7 +7,7 @@ import DogCard from "@/components/DogCard";
 import FilterSection from "@/components/FilterSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import Head from 'next/head';
 
 
 const HomePage: React.FC = () => {
@@ -65,9 +65,29 @@ const HomePage: React.FC = () => {
   }, [filteredBreeds]);
 
   return (
+    <>
+    <Head>
+      {/* <meta charset="UTF-8" /> */}
+      <title>BreedNav - Discover Dog Breeds</title>
+      <meta name="description" content="Find and explore dog breeds with BreedNav!" />
+      <meta name="keywords" content="dogs, dog breeds, breed finder, BreedNav" />
+      <meta name="author" content="David Logan (and Charla the AI)" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+      <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+      <meta property="og:title" content="BreedNav - Find Your Perfect Dog" />
+      <meta property="og:description" content="Explore various dog breeds, their traits, and images!" />
+      <meta property="og:type" content="website" />
+      {/* <meta property="og:url" content="https://breednav.com" /> */}
+      {/* <meta property="og:image" content="https://breednav.com/logo.png" /> */}
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <div className="page-wrapper">
       <Header title="BreedNav" />
       <main className="flex flex-col md:flex-row mx-4">
+
         <FilterSection
           breeds={breeds}
           onNameChange={(name) => setNameFilter(name)}
@@ -76,9 +96,21 @@ const HomePage: React.FC = () => {
           onGroupsChange={(newGroups) => setSelectedGroups(newGroups)}
           numberOfBreeds={numberOfBreeds}
         />
+
         <section className="md:w-2/3 mlgw-3/4 mx-4">
           {loading ? (
-            <p>Loading...</p>
+            <>
+              <p className="text-center text-2xl font-bold">Loading...</p>
+              <img className="w-56 h-56 mx-auto" src="/images/dog-play-bow.webp" />
+            </>
+          ) : filteredBreeds.length === 0 ? (
+            <div className="text-center mt-12">
+              <h2 className="text-2xl font-bold text-gray-700">No Results Found</h2>
+              <p className="text-gray-500 mt-2">
+                Sorry, no breeds match your filters. Try adjusting your search criteria.
+              </p>
+              <img className="w-56 h-56 mx-auto" src="/images/dog-play-bow.webp" />
+            </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10 mb-12">
               {filteredBreeds.map((breed) => (
@@ -87,9 +119,11 @@ const HomePage: React.FC = () => {
             </div>
           )}
         </section>
+
       </main>
       <Footer />
     </div>
+    </>
   );
 };
 

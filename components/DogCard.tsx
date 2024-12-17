@@ -33,8 +33,23 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
         )}
       </div>
 
+      <section className="mx-4 mb-8 flex items-center justify-between">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-2 flex items-center">
+          {breed.name}
+        </h2>
+        <button
+            onClick={handleViewMoreImages}
+            className={`ml-2 text-blue-500 hover:text-blue-700 ${
+              loading ? "animate-pulse" : ""
+            }`}
+            disabled={loading}
+            aria-label="View More Images"
+          >
+            <img src="/images/image-multiple-svgrepo-com.svg" className="w-8 h-8" />
+        </button>
+      </section>
+
       <section className="mx-4 mb-8">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-2">{breed.name}</h2>
         <div className="text-xl mb-4">
           {breed.breed_group ? `${breed.breed_group} group` : "No group"}
         </div>
@@ -49,21 +64,6 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
         <p className="text-gray-700 text-sm">
           Weight: {breed.weight?.imperial + " pounds" || "Not specified"}
         </p>
-
-        {/* View More Images Button with Loading State */}
-        <div className="mt-4">
-          <button
-            onClick={handleViewMoreImages}
-            className={`px-4 py-2 rounded text-white ${
-              loading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-500 hover:bg-blue-600"
-            }`}
-            disabled={loading} // Disable button while loading
-          >
-            {loading ? "Loading..." : "View More Images"}
-          </button>
-        </div>
       </section>
 
       {/* New Lightbox */}
