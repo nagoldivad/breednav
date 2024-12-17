@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="page-wrapper">
       <Header title="BreedNav" />
-      <main className="flex flex-row mx-4">
+      <main className="flex flex-col md:flex-row mx-4">
         <FilterSection
           breeds={breeds}
           onNameChange={(name) => setNameFilter(name)}
@@ -76,11 +76,11 @@ const HomePage: React.FC = () => {
           onGroupsChange={(newGroups) => setSelectedGroups(newGroups)}
           numberOfBreeds={numberOfBreeds}
         />
-        <section className="w-3/4 mx-4">
+        <section className="md:w-2/3 mlgw-3/4 mx-4">
           {loading ? (
             <p>Loading...</p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-10 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10 mb-12">
               {filteredBreeds.map((breed) => (
                 <DogCard key={breed.id} breed={breed} />
               ))}

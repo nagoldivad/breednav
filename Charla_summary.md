@@ -3,7 +3,7 @@
 Last updated: Dec 14
 
 ## Goal
-Create a dog breed search tool that allows users to dynamically filter and find breeds based on criteria such as size, temperament, energy level, and coat length.
+Create a dog breed search tool that allows users to dynamically filter and find breeds based on criteria such as size, temperament, breed group, etc.
 
 ## Current Status
 - **Tech Stack**: Next.js, Tailwind CSS, Axios, and The Dog API.
