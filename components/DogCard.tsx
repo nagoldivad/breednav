@@ -23,13 +23,18 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
 
   return (
     <div className="overflow-hidden bg-white shadow-md rounded-md">
+      
       <div className="relative overflow-hidden">
-        {breed.image && (
+        {breed.reference_image_id ? (
           <img
-            src={breed.image.url}
+            src={`https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`}
             alt={breed.name || "Dog image"}
             className="w-full h-96 sm:h-48 md:h-92 lg:h-80 object-cover object-top mb-4"
           />
+        ) : (
+          <div className="w-full h-96 sm:h-48 md:h-92 lg:h-80 flex items-center justify-center bg-gray-200 text-gray-600">
+            Image not found
+          </div>
         )}
       </div>
 

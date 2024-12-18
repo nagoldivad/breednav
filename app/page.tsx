@@ -31,6 +31,7 @@ const HomePage: React.FC = () => {
       }
     };
     loadBreeds();
+    console.log(breeds);
   }, []);
 
   const filteredBreeds = useMemo(() => {
@@ -67,23 +68,9 @@ const HomePage: React.FC = () => {
   return (
     <>
     <Head>
-      {/* <meta charset="UTF-8" /> */}
-      <title>BreedNav - Discover Dog Breeds</title>
-      <meta name="description" content="Find and explore dog breeds with BreedNav!" />
-      <meta name="keywords" content="dogs, dog breeds, breed finder, BreedNav" />
-      <meta name="author" content="David Logan (and Charla the AI)" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
-      <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
-      <meta property="og:title" content="BreedNav - Find Your Perfect Dog" />
-      <meta property="og:description" content="Explore various dog breeds, their traits, and images!" />
-      <meta property="og:type" content="website" />
-      {/* <meta property="og:url" content="https://breednav.com" /> */}
-      {/* <meta property="og:image" content="https://breednav.com/logo.png" /> */}
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+        <title>Test Page Title</title>
+        <meta name="description" content="This is a test description." />
+      </Head>
     <div className="page-wrapper">
       <Header title="BreedNav" />
       <main className="flex flex-col md:flex-row mx-4">

@@ -4,9 +4,10 @@ export interface Breed {
   breed_group: string;
   temperament?: string;
   life_span?: string;
-  image?: {
-    url: string;
-  };
+  // image?: {
+  //   url: string;
+  // };
+  reference_image_id: string;
   bred_for?: string;
   size?: string;
   height?: {
