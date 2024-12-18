@@ -14,7 +14,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "BreedNav - Discover Dog Breeds",
   description: "Find and explore dog breeds with BreedNav! Filter by size, temperament, and more to find your perfect match.",
   keywords: "dogs, dog breeds, breed finder, pet adoption, BreedNav",
