@@ -7,7 +7,6 @@ import DogCard from "@/components/DogCard";
 import FilterSection from "@/components/FilterSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Head from 'next/head';
 
 
 const HomePage: React.FC = () => {
@@ -66,11 +65,6 @@ const HomePage: React.FC = () => {
   }, [filteredBreeds]);
 
   return (
-    <>
-    <Head>
-        <title>Test Page Title</title>
-        <meta name="description" content="This is a test description." />
-      </Head>
     <div className="page-wrapper">
       <Header title="BreedNav" />
       <main className="flex flex-col md:flex-row mx-4">
@@ -110,7 +104,6 @@ const HomePage: React.FC = () => {
       </main>
       <Footer />
     </div>
-    </>
   );
 };
 
