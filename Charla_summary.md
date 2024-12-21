@@ -31,7 +31,16 @@ Planned for deployment on Vercel once the project reaches MVP status.
 ---
 
 
-API
+## Flaws and to do
+
+1. Dark mode on Safari iPad might not work. Check on iOS and MacOS.
+2. Add a font.
+
+
+---
+
+
+## API notes
 
 1. Breed Information
 Name: The breed name (e.g., Golden Retriever, Beagle).

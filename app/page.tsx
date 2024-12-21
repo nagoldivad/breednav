@@ -30,7 +30,6 @@ const HomePage: React.FC = () => {
       }
     };
     loadBreeds();
-    console.log(breeds);
   }, []);
 
   const filteredBreeds = useMemo(() => {
@@ -65,7 +64,7 @@ const HomePage: React.FC = () => {
   }, [filteredBreeds]);
 
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper font-sans">
       <Header title="BreedNav" />
       <main className="flex flex-col md:flex-row mx-4">
 

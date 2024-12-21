@@ -1,18 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "BreedNav - Discover Dog Breeds",
@@ -32,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "BreedNav",
     images: [
       {
-        url: "https://breednav.vercel.app/dog-play-bow.webp", // Replace with your social preview image
+        url: "https://breednav.vercel.app/breednav_logo.webp", // Replace with your social preview image
         width: 1200,
         height: 630,
         alt: "BreedNav social preview image",
@@ -40,14 +28,7 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "BreedNav - Discover Dog Breeds",
-    description: "Explore dog breeds with BreedNav! Filter breeds by traits to find your perfect companion.",
-    images: ["https://breednav.vercel.app/dog-play-bow.webp"], // Same as OpenGraph image
-    creator: "@nobody", // Replace with your Twitter username
-  },
+  }
 };
 
 
@@ -58,9 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+      </head>
+        <body className="inter-reg antialiased">
         {children}
       </body>
     </html>

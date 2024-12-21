@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+Charla_summary.md
 
 # debug
 npm-debug.log*
