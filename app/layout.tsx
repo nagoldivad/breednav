@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: "Find and explore dog breeds with BreedNav! Filter by size, temperament, and more to find your perfect match.",
   keywords: "dogs, dog breeds, breed finder, pet adoption, BreedNav",
   authors: [{ name: "David Logan" }, { name: "Charla the AI" }],
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow", // For search engines
   icons: {
     icon: "/favicon.ico", // Favicon for browsers
@@ -31,6 +30,8 @@ export const metadata: Metadata = {
   }
 };
 
+// Export viewport separately
+export const viewport = "width=device-width, initial-scale=1.0";
 
 export default function RootLayout({
   children,
@@ -43,6 +44,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+        <script data-goatcounter="https://breednav.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
       </head>
         <body className="inter-reg antialiased">
         {children}

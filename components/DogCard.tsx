@@ -23,19 +23,19 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
 
   return (
     <div className="overflow-hidden bg-white shadow-md rounded-md">
-      
+
       <div className="relative overflow-hidden">
-        {breed.reference_image_id ? (
-          <img
-            src={`https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`}
-            alt={breed.name || "Dog image"}
-            className="w-full h-96 sm:h-48 md:h-92 lg:h-80 object-cover object-top mb-4"
-          />
-        ) : (
-          <div className="w-full h-96 sm:h-48 md:h-92 lg:h-80 flex items-center justify-center bg-gray-200 text-gray-600">
-            Image not found
-          </div>
-        )}
+        <img
+          src={breed.reference_image_id 
+            ? `https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`
+            : "error_not_found.webp"}
+          alt={breed.name || "Dog image"}
+          loading="lazy"
+          onError={(e) => {
+            e.currentTarget.src = "/images/error_not_found.webp"; // Fallback image
+          }}
+          className="w-full h-96 sm:h-48 md:h-92 lg:h-80 object-cover object-top mb-4"
+        />
       </div>
 
       <section className="mx-4 mb-8 flex items-center justify-between">

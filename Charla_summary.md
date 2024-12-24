@@ -34,7 +34,18 @@ Planned for deployment on Vercel once the project reaches MVP status.
 ## Flaws and to do
 
 1. Dark mode on Safari iPad might not work. Check on iOS and MacOS.
-2. Add a font.
+2. X Add a font.
+3. X placeholder image.
+4. add goatcounter
+
+Enhance the Filter UI
+Tooltips: Add tooltips to explain each filter option (e.g., what does "Medium" size mean?).
+Previews: For temperament or size filters, show representative images/icons.
+Clear All Filters Button: Let users reset filters with a single click.
+
+Final Touch: Easter Egg!
+Add a fun, hidden feature for users to discover. For example:
+Typing "woof" in a search bar could show a surprise breed or a playful animation.
 
 
 ---
