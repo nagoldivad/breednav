@@ -22,7 +22,7 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
   };
 
   return (
-    <div className="overflow-hidden bg-white shadow-md rounded-md">
+    <div className="overflow-hidden bg-white dark:bg-slate-900 shadow-md rounded-md">
 
       <div className="relative overflow-hidden">
         <img

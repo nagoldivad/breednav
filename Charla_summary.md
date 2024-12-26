@@ -33,10 +33,8 @@ Planned for deployment on Vercel once the project reaches MVP status.
 
 ## Flaws and to do
 
-1. Dark mode on Safari iPad might not work. Check on iOS and MacOS.
-2. X Add a font.
-3. X placeholder image.
-4. add goatcounter
+* Dark mode on Safari iPad might not work. Check on iOS and MacOS.
+* Dark mode not working on Samsung mobile.
 
 Enhance the Filter UI
 Tooltips: Add tooltips to explain each filter option (e.g., what does "Medium" size mean?).
