@@ -44,7 +44,7 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
         </h2>
         <button
             onClick={handleViewMoreImages}
-            className={`ml-2 text-blue-500 hover:text-blue-700 ${
+            className={`ml-2 text-blue-500 hover:text-blue-700 dark:bg-slate-200 ${
               loading ? "animate-pulse" : ""
             }`}
             disabled={loading}
