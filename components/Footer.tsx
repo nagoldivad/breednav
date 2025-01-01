@@ -23,6 +23,13 @@ const Footer: React.FC = () => {
             >
               Unlicense
             </a>
+            <a
+              className="hover:underline hover:text-blue-400 transition-colors duration-200"
+              href="https://github.com/nagoldivad/breednav"
+              aria-label="View on Github"
+            >
+              View this project on GitHub
+            </a>
           </p>
         </div>
         <div className="text-center md:text-right">

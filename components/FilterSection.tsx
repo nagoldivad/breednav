@@ -25,13 +25,13 @@ const FilterSection: React.FC<FilterSectionProps> = ({
     <section className="md:w-1/3 lg:w-1/4 bg-gray-200 dark:bg-slate-900 md:h-screen p-4 mx-4 mb-8 shadow-md rounded-md">
       
       <h2 className="text-xl font-bold mb-4">
-        <img src="/images/filters-2-svgrepo-com.svg" alt="filter icon" className="w-8 h-8 mr-2 inline-block" />
+        <img src="/images/filters-2-svgrepo-com.svg" alt="filter icon" className="w-8 h-8 mr-2 inline-block dark:text-black" />
         Filters
       </h2>
 
       <div className="">
 
-        <div className="text-xl mb-4">
+        <div className="text-xl mb-4 dark:text-black">
           Showing {numberOfBreeds} Breeds
         </div>
 
@@ -42,7 +42,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
 
         {/* Size Filter */}
         <div className="custom-select-container mb-4">
-          <label className="block font-medium mb-1">Size</label>
+          <label className="block font-medium mb-1 dark:text-black">Size</label>
           <select
             className="custom-select"
             onChange={(e) => onSizeChange(e.target.value)}
@@ -56,7 +56,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
 
         {/* Group Filter */}
         <div className="mb-4">
-          <label className="block font-medium mb-1">Groups</label>
+          <label className="block font-medium mb-1 dark:text-black">Groups</label>
           <SelectGroups
             breeds={breeds}
             onGroupsChange={onGroupsChange}

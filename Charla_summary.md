@@ -5,6 +5,7 @@ Last updated: Dec 14
 ## Goal
 Create a dog breed search tool that allows users to dynamically filter and find breeds based on criteria such as size, temperament, breed group, etc.
 
+
 ## Current Status
 - **Tech Stack**: Next.js, Tailwind CSS, Axios, and The Dog API.
 - **Setup**: API integrated; breed data fetching and dynamic filtering are functional.
@@ -13,28 +14,21 @@ Create a dog breed search tool that allows users to dynamically filter and find 
   - Filters are synchronized with a centralized state in the `HomePage` component.
 - **Dynamic Trait Generation**: Trait options are dynamically extracted from breed temperaments (`breeds.temperament`).
 
+
 ## Deployment
-Planned for deployment on Vercel once the project reaches MVP status.
+Has been deployed on Vercel and has domain name of breednav.com.
 
 ## Outstanding Tasks
-1. **Enhance UI/UX**:
-   - Refine the layout and responsiveness of filter components and breed results.
-   - Add feedback for empty results (e.g., "No breeds match your filters").
-2. **Improve Data Management**:
-   - Ensure SSR and hydration consistency for server-side rendered breed data.
-   - Preload breed data using `getServerSideProps` or `getStaticProps` if needed.
-3. **Final Functionalities**:
-   - Allow users to filter by additional attributes (e.g., coat length, energy level).
-   - Optimize and validate API calls for production readiness.
-
+Unknown. See Flaws and TODOs
 
 ---
 
 
-## Flaws and to do
+## Flaws and TODOs
 
 * Dark mode on Safari iPad might not work. Check on iOS and MacOS.
 * Dark mode not working on Samsung mobile.
+* Add link to GitHub repo in footer.
 
 Enhance the Filter UI
 Tooltips: Add tooltips to explain each filter option (e.g., what does "Medium" size mean?).
@@ -44,7 +38,6 @@ Clear All Filters Button: Let users reset filters with a single click.
 Final Touch: Easter Egg!
 Add a fun, hidden feature for users to discover. For example:
 Typing "woof" in a search bar could show a surprise breed or a playful animation.
-
 
 ---
 
