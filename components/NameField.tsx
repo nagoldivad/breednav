@@ -20,7 +20,7 @@ const NameField: React.FC<NameFieldProps> = ({ onNameChange }) => {
 
   return (
     <div className="mb-4">
-      <label className="block font-medium mb-1 dark:text-black">Breed Name</label>
+      <label className="block font-medium mb-1">Breed Name</label>
       <div className="relative flex items-center">
         <input
           type="text"

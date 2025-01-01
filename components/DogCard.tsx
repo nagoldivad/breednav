@@ -39,7 +39,7 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
       </div>
 
       <section className="mx-4 mb-8 flex items-center justify-between">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-2 flex items-center dark:text-black">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-2 flex items-center">
           {breed.name}
         </h2>
         <button
@@ -55,18 +55,18 @@ const DogCard: React.FC<{ breed: Breed }> = ({ breed }) => {
       </section>
 
       <section className="mx-4 mb-8">
-        <div className="text-xl mb-4 dark:text-black">
+        <div className="text-xl mb-4">
           {breed.breed_group ? `${breed.breed_group} group` : "No group"}
         </div>
-        <p className="mb-2 dark:text-black">{breed.temperament}</p>
-        <p className="text-gray-700 text-sm">Life Span: {breed.life_span}</p>
-        <p className="text-gray-700 text-sm">
+        <p className="mb-2">{breed.temperament}</p>
+        <p className="text-gray-700 dark:text-white text-sm">Life Span: {breed.life_span}</p>
+        <p className="text-gray-700 dark:text-white text-sm">
           Bred For: {breed.bred_for || "Not specified"}
         </p>
-        <p className="text-gray-700 text-sm">
+        <p className="text-gray-700 dark:text-white text-sm">
           Height: {breed.height?.imperial + " inches" || "Not specified"}
         </p>
-        <p className="text-gray-700 text-sm">
+        <p className="text-gray-700 dark:text-white text-sm">
           Weight: {breed.weight?.imperial + " pounds" || "Not specified"}
         </p>
       </section>
